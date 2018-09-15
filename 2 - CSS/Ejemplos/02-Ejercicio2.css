@@ -1,0 +1,13 @@
+html{
+	font-size: 18px;
+	line-height: 1.2;
+}
+
+section.especial{
+	font-size: 20px;
+	line-height: 1.2;
+}
+
+p.pequenho{
+	font-size: 0.5rem;
+}

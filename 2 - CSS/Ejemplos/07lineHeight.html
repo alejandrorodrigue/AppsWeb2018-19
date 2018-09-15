@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style>
+p{
+	font-size: 30px;
+	line-height: 1.1;
+}
+
+p.small {
+    line-height: 10px;
+}
+p.big {
+    line-height: 50px;
+}
+
+
+/* Ejemplo line-height sin medida */
+div.porcentaje{
+	line-height: 1.5em;
+}
+div.sinMedida{
+	line-height: 1.5;
+}
+</style>
+</head>
+<body>
+
+<p>
+Este es un parrafo con un valor estandar line-height.
+El valor por defecto en la mayoría de los navegadores es 20px ¿Podrías comprobarlo?.
+Este es un parrafo con un valor estandar line-height.
+Este es un parrafo con un valor estandar line-height.
+</p>
+
+<p class="small">
+Este es un parrafo con un valor mas pequeño line-height.
+Este es un parrafo con un valor mas pequeño line-height.
+Este es un parrafo con un valor mas pequeño line-height.
+Este es un parrafo con un valor mas pequeño line-height.
+</p>
+
+<p class="big">
+Este es un parrafo con un valor mas grande line-height.
+Este es un parrafo con un valor mas grande line-height.
+Este es un parrafo con un valor mas grande line-height.
+Este es un parrafo con un valor mas grande line-height.
+</p>
+
+<!-- Ejemplo de la diferencia entre poner valor con % o valor sin medida -->
+
+<div class="porcentaje">
+<p> Párrafo dentro de un div con un line-height con porcentaje.
+ Párrafo dentro de un div con un line-height con porcentaje.
+  Párrafo dentro de un div con un line-height con porcentaje.
+   Párrafo dentro de un div con un line-height con porcentaje.
+    Párrafo dentro de un div con un line-height con porcentaje.
+    </p>
+    <!-- Este párrafo tendrá un interlineado de 24 px ya que al estar expresado con porcentaje se ha calculado con respecto
+    al valor de font-size establecido en el div:  16px + 8px -->
+    </div>
+<div class="sinMedida">
+<p> Párrafo dentro de un div con un line-height sin medida
+Párrafo dentro de un div con un line-height sin medida
+Párrafo dentro de un div con un line-height sin medida
+Párrafo dentro de un div con un line-height sin medida
+Párrafo dentro de un div con un line-height sin medida
+<!-- Este párrafo tendrá un interlineado de 45 px ya que es 30 px + 15 px-->
+</p>
+</div>
+</body>
+</html>
