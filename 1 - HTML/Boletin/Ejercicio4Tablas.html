@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        caption{
+            font-size: 1.5em;
+            color: darkcyan;
+            /* letter-spacing: 0.5em; */
+        }
+
+        div.tableContainer{
+            border:2px solid brown;
+            width: 60%;
+            margin:0 auto;
+        }
+        table{
+            border:1px solid green;
+            text-align: center;
+            margin:0 auto;
+        }
+
+        td , th{
+            padding: 1em;
+            border: 1px solid burlywood;
+        }
+    </style>
+</head>
+<body>
+    <h1> Tabla 1 Del ejercicio 4</h1>
+    <div class="tableContainer">
+    <table>
+        <caption>
+                Super oferta Viaje a Nueva Zelanda
+        </caption>
+        <thead>
+            <tr>
+                <th rowspan="2" colspan="2"></th>
+                <th colspan="2"> Hoteles 3 estrellas</th>
+                <th rowspan="2"> Hoteles 4 estrellas</th>
+                
+            </tr>
+            <tr>
+                <th>Solo alojamiento</th>
+                <th>Pensión completa</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr><td colspan="5"><small> Tabla creada por Ramon RS</small></td></tr>
+        </tfoot>
+        <tbody>
+            <!-- **************  Primera fila*************** -->
+                <tr>
+                    <th rowspan="2">1 semana </th>
+                    <th>Avión turista</th>
+                    <td> 700 USD</td>
+                    <td>1000 USD</td>
+                    <td rowspan="2">1500 USD</td>
+                   <td rowspan="3"><p>H<br>T<br>M<br>L<br>&nbsp;is<br>&nbsp;&nbsp;awe<br>&nbsp;&nbsp;&nbsp;&nbsp;some</p></td>
+                </tr>
+            <!-- ************** Fin de la primera fila ******************** -->
+                <tr>
+                    <td>Avión preferente</td>
+                    <td>780 USD</td>
+                    <td>900 USD</td>
+                </tr>
+                <tr>
+                    <td colspan="2">2 semanas</td>
+                    <td> 890USD</td>
+                    <td>900 USD</td>
+                    <td> 1200 USD</td>
+                </tr>
+        </tbody>
+    </table>
+</div>
+    
+</body>
+</html>

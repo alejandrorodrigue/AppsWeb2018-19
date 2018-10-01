@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        div.separador{
+            margin:2em;
+        }
+        td{
+            /* border:1px solid black; */
+            padding: .5em;
+        }
+
+        ul{
+            list-style-type: none;
+        }
+
+        form{
+            width: 60%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <form name="formRegistro" method="POST" action="archivoDestino.php">
+        <fieldset>
+            <legend>
+                Regístrese en el curso :
+            </legend>
+
+        
+       <p> <label for="txtCajaNombre"> Nombre : </label><input id="txtCajaNombre" type="text" name="txtNombre" placeholder="nombre" required size="10">
+       </p>
+      <p>  <label for="txtCajaEdad">Edad : </label><input type="number" min="18" max="99" id="txtCajaEdad" name="txtEdad"></p>
+       <p> 
+         <label for="txtCajaCorreo"> Email </label>  <input disabled type="email" name="txtCorreo" id="txtCajaCorreo" placeholder="email@dominio.com">
+       </p>
+       <p> 
+            <label for="txtCajaDNI"> DNI </label>  <input type="text" name="txtDNI" id="txtCajaDNI" placeholder="12345678A" maxlength="9">
+          </p>
+
+        <p>Escoje un horario : </p>
+        <p>
+        <input type="radio" checked name="rdbHorario" value="manana"> Mañana
+        <input type="radio"  name="rdbHorario" value="tarde"> Tarde
+        </p>
+
+        <p>Escoje dos asignaturas</p>
+        <ul>
+              <li>  <input type="checkbox" name="ao" value="ao">Aplicaciones Ofimáticas</li>
+              <li>  <input type="checkbox" name="aw" value="aw">Aplicaciones Web</li>
+              <li> <input type="checkbox" name="sor" value="sor">SOR</li>
+               <li> <input type="checkbox" name="ser" value="ser">SER</li>
+        </ul>
+
+        <p> Escoge un centro</p>
+        <p>
+        <select name="colegio">
+            <option disabled selected>Colegio: </option> 
+            <option value="montecastelo">Montecastelo</option>
+            <option value="teis">Teis</option>
+            <option value="castelao"> Castelao</option>
+            </select>
+        </p>
+        <p>
+        <textarea rows="5" cols="40" maxlength="200" >
+
+        </textarea>
+    </p>
+      <input type="submit" value="Enviar">
+      <input type="button" value="Resetear" id="btnResetear" name="btnResetear">
+      <button> Validar </button>
+    </fieldset>
+    </form>
+
+
+    <div class="separador">
+
+    </div>
+    <form>
+        <table>
+            <tr>
+                <td><label for="txtCajaNombre"> Nombre : </label></td>
+                <td><input id="txtCajaNombre" type="text" name="txtNombre" placeholder="nombre" required size="10"></td>
+            </tr>
+            <tr>
+                <td><label for="txtCajaEdad">Edad : </label></td>
+                <td><input type="number" min="18" max="99" id="txtCajaEdad" name="txtEdad"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
