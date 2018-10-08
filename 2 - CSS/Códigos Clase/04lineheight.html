@@ -7,15 +7,21 @@
     <title>Document</title>
     <style>
         div{
-            font-size:20px;
+             font-size:20px; 
         }
         section{
-            line-height: 1.2;
+            font-size:2em;
+            /* line-height: 1.2em; */
+            /* De esta manera el valor de interlineado aplicado a los parrafos descendientes
+            de este section será de 36 px , esto un 20% más del font-size establecido en este caso 30px */
+
+            /* Cuando el line-height va sin unidades toma como referencia el font-size del elemento
+            sobre el que se aplique: Opción recomendada cuando esta propiedad se establece en un contenedor */
         }
 
         p{
-            font-size: 30px;
-            line-height: 1.1em;
+            font-size: 40px;
+          
         }
     </style>
 </head>
