@@ -1,0 +1,10 @@
+p{
+    color: yellow;
+    text-decoration: underline;
+    text-decoration-color: brown;
+    
+}
+
+p.especial{
+    color: blue; 
+}

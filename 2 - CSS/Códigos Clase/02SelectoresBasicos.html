@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selectores básicos</title>
+
+    <style>
+        /* Selector de etiqueta */
+        section{
+
+        }
+
+        /* Selector de etiqueta múltiple. */
+
+        h1 , h2 , h3 , h4 {
+
+        }
+
+        /* Selector de id */
+        #unico{
+
+        }
+
+        /* Selector de clase : . */
+        .especial{
+
+        }
+
+        .especial , p , #unico{
+
+        }
+
+       
+
+        p#unico{
+
+        }
+
+       
+        
+        p{
+            font-size: 2em;
+        }
+
+         /* Selector de clase restringido con selector de etiqueta */
+         p.especial{
+             color:red;
+             font-weight: bold;
+        }
+
+        /* Selector de clase múltiple */
+
+        p.especial.articulo {
+
+            font-style: italic;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <p class="especial">
+        Soy un párrafo especial
+    </p>
+    <p class="especial articulo">
+        Soy un artículo especial
+
+    </p>
+</body>
+</html>

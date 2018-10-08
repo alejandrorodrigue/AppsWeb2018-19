@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Form validation</legend>
+       
+        <table>
+            <tr>
+                <td><label for="txtNombre">Name :</label></td>
+                <td><input type ="text" id="txtNombre" name="txtCajaTexto"></td>
+            </tr>
+            <tr>
+                <td><label for="txtUserName">Username :</label></td>
+                <td><input type ="text" id="txtUserName" required name="txtCajaUsername"></td>
+            </tr>
+            <tr>
+                    <td><label for="txtPassword">Password :</label></td>
+                    <td><input type ="password" id="txtPassword" maxlength="12" required name="txtCajaPasword"></td>
+            </tr>
+            <tr>
+                    <td><label for="txtRePassword">Re-type password :</label></td>
+                    <td><input type ="password" id="txtRePassword" maxlength="12" name="txtCajaRePasword"></td>
+            </tr>
+            <tr>
+                <td><label for="rdbGenero">Gender: </label></td>
+                <td>
+                    <input type = "radio" id="rdbGeneroMale" name="radioGenero" value="male">Male
+                    <input type = "radio" id="rdbGeneroFemale" name="radioGenero" value="female">Female
+                    <input type = "radio" id="rdbGeneroOther" name="radioGenero" value="other">Other
+                    </td>
+            </tr>
+            <tr>
+                <td>Programming skills</td>
+                <td>
+                    <input type="checkbox" value="java" name="chkProgramming"> java
+                    <input type="checkbox" value="c#" name="chkProgramming"> c#
+                    <input type="checkbox" value="c++" name="chkProgramming"> c++
+                    <input type="checkbox" value="android" name="chkProgramming"> Android
+                </td>
+            </tr>
+            <tr>
+                <td><label for="txtContact" >Contact nº</label></td>
+                <td><input type = "tel" id="txtContact" name="txtCajaTel"></td>
+            </tr>
+            <tr>
+                    <td><label for="txtEmail" >Email</label></td>
+                    <td><input type = "email" id="txtEmail" name="txtCajaEmail"></td>
+            </tr>
+            <tr>
+                <td>College</td>
+                <td>
+                    <select>
+                        <option disabled selected>Seleciona colegio:</option>
+                        <option value="montecastelo">Montecastelo  </option>                   
+                        <option value="teis">IES Teis  </option>
+                        <option value="pazAndrade">IES Paz Andrade  </option>                                      
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Enviar"></td>
+            </tr>
+        </table>
+    </fieldset>
+    </form>
+</body>
+</html>
