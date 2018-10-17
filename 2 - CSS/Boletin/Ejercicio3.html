@@ -19,14 +19,48 @@
             font-size:30px;
         }
 
+        p{
+            /* text-indent: 30px; */
+        }
+
+        p::first-line{
+            color:blue;
+            width: 20%;
+        }
+        p::first-letter{
+            font-size: 2em;
+        }
+
         p.pequenho{
             font-size:0.5em;
+        }
+
+        ul.menu{
+            list-style-type: none;
+        }
+
+        td.central{
+            text-align: center;
+        }
+
+        td.secundario{
+            text-align: right;
+        }
+
+        a{
+            text-decoration: none;
+            font-style: italic;
+            font-weight:bold;
+            color: black;
+            font-size:0.9rem;
+
         }
 
     </style>
 
 </head>
 <body>
-    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quidem laborum odio sit, libero officiis nihil dolor voluptatibus, a, hic nemo. Ratione eum aspernatur magni vero laboriosam cum perferendis consequuntur?</p>
+    <a href="#"> Esto es un enlace</a>
 </body>
 </html>
