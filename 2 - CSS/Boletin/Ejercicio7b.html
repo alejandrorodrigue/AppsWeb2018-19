@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style-type: none;
+            /* Quito padding izquierdo */
+            padding-left: 0px; 
+        }
+
+        ul li{
+            display: inline-block;
+            border:2px inset blue;
+            padding: 0.6em;
+            width: 200px;
+            text-align: center;
+            background: yellow;
+        }
+
+        ul li:hover{
+            background:red;
+            /* color: white; Esto no funciona con los enlaces*/
+        }
+
+        ul li:hover a{
+            /* color: white; */
+            font-weight: bold;
+            font-size:0.8em;
+        }
+
+        ul li a{
+            text-decoration: none;
+            display: block;
+        }
+
+      
+
+
+    </style>
+</head>
+<body>
+    <div>
+    <header>
+    <h2> Ejercicio 1</h2>
+    <ul>
+        <li>
+            
+            <a href="">Inicio</a></li>
+        <li><a href="">Libros programacion</a></li>
+        <li><a href="">Cursos programacion</a></li>
+        <li><a href="">No me acuerdo</a></li>
+    </ul>
+    </header>
+    </div>
+  <div>
+      <h2> Ejercicio 8</h2>
+      <header>
+          <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">Products</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Contact</a></li>
+          </ul>
+      </header>
+  </div>
+</body>
+</html>

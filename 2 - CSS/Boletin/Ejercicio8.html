@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+    body{
+
+        }
+    div:nth-child(2){
+
+    }
+    div:nth-child(2) header{
+        border: 1px solid red;
+    }
+    div:nth-child(2) header ul{
+        list-style-type: none;
+        padding-left: 0px;
+    }
+    div:nth-child(2) header ul li{
+        width: 30%;
+        border: 1px solid gray;
+        padding: 0.8em;
+        background-color: #414144;
+        
+    }
+
+    
+    /* Estilos primer li */
+    div:nth-child(2) header ul li:first-child{
+        background-color: #779D00;
+    }
+
+    div:nth-child(2) header ul li:first-child a{
+        color: #5D6006;
+    }
+
+    div:nth-child(2) header ul li:first-child:hover a{
+        color: white;
+    }
+
+    /* Fin estilos primer li */
+
+   div:nth-child(2) header ul li:not(:first-child){
+        background-image: url("Imagenes/flecha.png");
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-position: 90% center;
+    }
+    div:nth-child(2) header ul li a{
+        color: white;
+        text-decoration:none;
+        display: block;
+    }
+
+    
+    </style>
+</head>
+<body>
+        <div>
+                <header>
+                <h2> Ejercicio 1</h2>
+                <ul>
+                    <li>
+                        
+                        <a href="">Inicio</a></li>
+                    <li><a href="">Libros programacion</a></li>
+                    <li><a href="">Cursos programacion</a></li>
+                    <li><a href="">No me acuerdo</a></li>
+                </ul>
+                </header>
+                </div>
+              <div>
+                  <h2> Ejercicio 8</h2>
+                  <header>
+                      <ul>
+                          <li><a href="">Home</a></li>
+                          <li><a href="">Products</a></li>
+                          <li><a href="">About</a></li>
+                          <li><a href="">Contact</a></li>
+                      </ul>
+                  </header>
+              </div>
+</body>
+</html>
