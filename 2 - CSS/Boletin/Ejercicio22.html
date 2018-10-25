@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        [class^="col-"]{
+            width: "30%";
+            border: 1px solid blue;
+            height: 20vh;
+        }
+
+        tbody  th:nth-child(even){
+            background: red;
+        }
+
+
+        ul li:first-child{
+
+        }
+    </style>
+</head>
+<body>
+    <h2> Ejercicio 21</h2>
+
+    <pre>p * span.resaltar</pre>
+    <p>Elementos span cuyo atributo class tenga el valor resaltar y
+        sean descendientes de cualquier elemento que sea descendiente de un párrafo
+    </p>
+
+    <pre>p > span.resaltar</pre>
+
+    <p> Elementos span cuyo atributo class contenga el valor resaltar
+        y sean hijos de elementos p
+    </p>
+
+    <pre> ul + ol</pre>
+    <p> Elementos ol que sean hermanos de elementos ul</p>
+
+    <pre> [class*="col-"] </pre>
+    <p> Elementos cuyo atributo class contenga la subcadena col-</p>
+    
+    <pre>ul li:firstchild</pre>
+    <p> Elementos li que sean primeros hijos de otro elemento y descendiente de un ul</p>
+
+    <pre>div.container ul:nth-child(4) li:nth-child(odd)</pre>
+
+    <p> Elementos li que sean hijos impares y descendientes de elementos
+        ul que sean cuartos hijos de otro elemento y descendientes de un elemento
+        div cuyo atributo class contiene el valor container
+    </p>
+
+    <pre>section table:nth-child(4) tbody tr:hover</pre>
+
+    <p>Elemento tr en estado :hover descendiente de un elemento tbody que es 
+        descendiente de un elemento table que es cuarto hijo y que es descendiente de un section
+    </p>
+
+
+   <h2> Ahora sí el Ejercicio 22</h2>
+
+   <p>Enlaces que sean descendientes de elementos li que sean hijos de listas
+        desordenadas de la clase “listin”</p>
+
+        <pre>ul.listin > li a</pre>
+    
+        <p>Elementos span que sean descendientes pero no hijos de párrafos cuya
+                clase sea texto</p>
+
+
+            <pre>p.texto * span</pre>
+
+
+        <p>Texto que está siendo seleccionado por el usuario en párrafos situados
+                dentro de etiquetas <article> de clase “noticia”.</p>
+
+
+                <pre>article.noticia p::selection</pre>
+
+        <p>Cajas de texto de tipo password que tienen el foco (o están siendo
+                sobrepasadas por el ratón).</p>
+
+        <pre>input[type="password"]:hover , input[type="password"]:focus </pre>
+
+        <pre>tbody > tr:nth-child(even)</pre>
+
+        <p>Elementos tr que sean primeros hijos del <tbody> de la segunda tabla
+                empezando por el final que esté situada dentro de una etiqueta <main></p>
+
+
+        <pre> main table:nth-last-child(2) tbody tr:first-child</pre>
+                </body>
+</html>

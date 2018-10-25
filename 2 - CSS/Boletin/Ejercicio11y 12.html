@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        div.container{
+
+        }
+        table.tabla1{
+            border-collapse: collapse;
+
+        }
+
+        table.tabla1 caption{
+            font-size: 2em;
+
+        }
+        table.tabla1 thead{
+            font-size: 1.1em;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            background-image: linear-gradient(#00557f,#006699);
+        }
+
+        /* Estilos cabecer tabla */
+        table.tabla1 thead th{
+            padding: 0.5em 2em;
+            background-size:30px;
+            background-repeat: no-repeat;
+            background-position: 5px center;
+        }
+
+        table.tabla1 thead tr th:first-child{
+            background-image: url("Imagenes/iconoCabeza.png");       
+            }
+            table.tabla1 thead tr th:nth-child(3){
+                background-image:url("Imagenes/iconoDireccion.png")
+            }
+            table.tabla1 thead tr th:nth-child(4){
+                background-image:url("Imagenes/iconoTlfn.png")
+            }
+
+
+        /* Estilos cuerpo tabla */
+        table.tabla1 tbody tr{
+            font-size: 0.9em;
+            text-align: left;
+
+        }
+
+        table.tabla1 tbody tr:nth-child(2n){
+            background:#E1EEf4;
+        }
+
+        table.tabla1 tbody tr td{
+            border-right:1px solid darkblue;
+            padding-left: 0.3em;
+            padding-top: 0.6em;
+            padding-bottom: 0.6em;
+        }
+
+        table.tabla1 tbody tr td:not(:last-child){
+            /* text-decoration: red;
+            text-decoration-style: solid;
+            text-decoration-line: underline; */
+
+        }
+
+        table.tabla1 tbody tr td:last-child{
+            border-right: none;
+        }
+
+        table.tabla1 tbody tr:hover{
+            font-size:1.1em;
+            cursor: pointer;
+        }
+
+        /* Estilos pie de tabla */
+        
+        table.tabla1 tfoot {
+            background:#E1EEf4; 
+        }
+
+        table.tabla1 tfoot tr ul {
+            list-style-type: none;
+            padding-left: 0px;
+            text-align:right;
+            padding-right: 20px;
+        }
+
+        table.tabla1 tfoot tr ul li{
+            display: inline-block;
+            padding: 1em;
+            background-image:linear-gradient(#00557f,#006699);
+            border-radius: 50px;
+            
+        }
+
+        table.tabla1 tfoot tr ul li a{
+            color: white;
+            font-weight: bold;
+            text-decoration:none;
+        }
+
+        /* Estilos formualrio */
+        label , input{
+            display: block;
+            margin-bottom:5px;
+        }
+
+        input{
+            width: 80%;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+    <table class="tabla1">
+        <caption>Lista aprobados oposiciones Sergas</caption>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Direccion</th>
+                <th>Teléfono</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="4">
+                    <ul>
+                        <li><a href="">Previo</a></li>
+                        <li><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">Siguiente</a></li>
+                    </ul>
+                </td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>Pedro</td>
+                <td>Martinez</td>
+                <td>Calle del Olvido</td>
+                <td>600010101</td>
+            </tr>
+            <tr>
+                <td>Juan</td>
+                <td>Gutierrez</td>
+                <td>Avda Fragoso</td>
+                <td>687651234</td>
+            </tr>
+            <tr>
+                <td>María</td>
+                <td>Gonzalez</td>
+                <td>Calle Urzáiz</td>
+                <td>609103467</td>
+            </tr>
+            <tr>
+                <td>Luis</td>
+                <td>Gutierrez</td>
+                <td>Desengaño 21</td>
+                <td>675891220</td>
+            </tr>
+            <tr>
+                <td>Santiago</td>
+                <td>Sanchez</td>
+                <td>Elm Street</td>
+                <td>601010101</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form>
+        <h2>Contacta con nosotros</h2>
+        <label for="txtNombre">Name</label>
+        <input type="text" id="txtNombre">
+        <label for="txtEmail">Dirección de correo</label>
+        <input type="email" id="txtEmail">
+        <label for="txtTelefono">Número de teléfono</label>
+        <input type="text" id="txtTelefono">
+        <label>Mensaje</label>
+        <textarea>
+
+        </textarea>
+    </form>
+</div>
+</body>
+</html>
