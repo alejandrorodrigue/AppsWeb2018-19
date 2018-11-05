@@ -1,0 +1,90 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+
+	h3{
+		width:20%;
+		margin: 0 auto .4em auto;
+	}
+
+	div.izquierda,div.centro,div.derecha{
+		float: left;
+		width:27%;
+		margin: 0 ;
+	}
+	div.centro{
+		width:20%;
+	}
+	div.izquierda p ,div.centro p,div.derecha p{
+		margin-bottom: .6em;
+	}
+	div.domicilio{
+		float: left;
+		width:54%;
+		margin: 0;
+	}
+	div.clearLeft{
+		clear: left;
+	}
+
+	form{
+		background-color: gray;
+	}
+
+	input{
+		/*width: 100%;*/  /*Si quisiéramos adaptar el ancho de los input al tamaño de la página*/
+	}
+	</style>
+</head>
+<body>
+<h3> Hoja de inscripción en los Ciclos Formativos de Grado Superior </h3>
+
+<form>
+<fieldset>
+	<legend>Datos personales<span class="fieldSpan">*</span></legend>
+	<div class="izquierda">
+		<p><label for="apellidos"> Apellidos </label></p>
+		<input type="text" size ="40" id="apellidos">
+
+
+	</div>
+	<div class="centro">
+		<p><label for="nombre"> Nombre </label></p>
+		<input type="text" size ="30" id="nombre">
+	</div>
+	<div class="derecha">
+		<p><label for="dni"> DNI</label></p>
+		<input type="text" size ="40" id="dni">
+	</div>
+	<div class="clearLeft"></div>
+	<div class="izquierda">
+		<p><label for="nacido"> Nacido en </label></p>
+		<input type="text" size ="30" id="nacido">
+
+		
+	</div>
+	<div class="centro">
+		<p><label for="provincia"> Provincia</label></p>
+		<select id ="provincia" name="provincias">
+			<option value="valencia"> Valencia </option>
+			<option> Madrid </option>
+			<option> Barcelona </option>
+			<option> Santander </option>
+			<option> Ourense </option>
+		</select>
+	</div>
+	<div class="derecha">
+		<p><label for="dni"> Fecha de nacimiento</label></p>
+		<input type="text" size ="10" id="dni">
+	</div>
+	<div class="domicilio">
+		<p><label for="domicilio"> Domicilio (Calle, piso número...) </label></p>
+		<input type="text" size ="60" id="nacido">
+	</div>
+	<div class="cPostal"></div>
+</fieldset>
+	</form>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div.container{
+			border:5px solid red;
+		}
+		img{float: left;}
+		.container{
+			/*1ª Estrategia*/
+			/*overflow: hidden;*/
+			/*3ª Estrategia:Flotar container*/
+			/*float: left;*/
+		}
+
+		/*2ª Estrategia: Añadir div vacío y aplicar clear*/
+		.clear{
+			clear: both;
+		}
+
+		/*4ª Estrategia generar contenido de bloque*/
+		.container::after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+	</style>
+</head>
+<body>
+<div class="container">
+<img src="../../Imagenes/logo4.jpg" class="floatleft">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+
+<!-- 
+2ª estrategia: Añadir div vacía
+<div class="clear"></div> -->
+</div>
+</body>
+</html>

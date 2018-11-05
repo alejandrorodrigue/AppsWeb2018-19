@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Ejemplo fluidez</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	@keyframes expand{
+  		0%  { width: 100%;}
+  		100%{ min-width: 100px; 
+  			width: 30%;}
+		}
+		div{
+			width:40%;
+		}
+		div.primero p{
+			animation:expand 3s alternate infinite both;
+			background:mediumaquamarine;
+		}
+
+		div.segundo{
+				background:coral;
+
+		}
+	</style>
+</head>
+<body>
+<div class="primero">
+<p> 
+Un elemento de bloque ocupará todo el ancho disponible,mientras su atura variará automáticamente de acuerdo al tamaño de su contenido.</p>
+</div>
+
+<div class="segundo">
+<p>
+Este elemento será empujado hacia abajo en función de la altura de su predecesor.
+</p>
+</div>
+
+</body>
+</html>
