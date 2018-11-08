@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        div.container{
+            /* overflow: hidden; */
+        }
+        div.container::after{
+            content: "";
+            display: block;
+            clear: left;
+        }
+        img{
+            float: left;
+            width: 200px;
+            height: 150px;
+        }
+
+        p{
+            float:left; 
+            width: 30%;
+            
+        }
+        p.derecha{
+            float: right;
+        }
+        div.clear{
+            clear: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo4.jpg">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est sapiente, illum quisquam cupiditate quis harum optio commodi. Hic ducimus laborum tenetur ab, dolor corrupti dolorum nihil corporis, nemo excepturi  </p>
+        <p class="derecha">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est sapiente, illum quisquam cupiditate quis harum optio commodi. Hic ducimus laborum tenetur ab, dolor corrupti dolorum nihil corporis, nemo excepturi  </p>
+        <!-- <div class="clear"></div> -->
+    </div>
+
+    <div class="div2">
+
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto recusandae repellendus quibusdam, quod veritatis illo, quia ipsam vitae deleniti ullam animi, modi dignissimos dolor aspernatur eius at accusamus saepe omnis.</h3>
+    </div>
+</body>
+</html>
