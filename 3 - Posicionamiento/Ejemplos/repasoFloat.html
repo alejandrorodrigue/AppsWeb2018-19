@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        header{
+            height: 20vh;
+            border: 3px solid yellow;
+            
+        }
+        header ul{
+            background: darkblue;
+            border: 4px solid darkred;
+            list-style-type :none;
+            padding-left: 0px;
+            margin:0 25%;
+           
+        }
+
+        header ul::after{
+            content:"";
+            clear: both;
+            display: block;
+        }
+
+        header ul li{
+            float:left;
+            padding-left:1%;;
+            position:relative;
+           
+        }
+
+        header ul li:first-child{
+            margin-left: 15%;
+        }
+
+        header ul li a{
+            color: white;
+        }
+
+        .clear{
+            clear: left;
+        }
+
+        main{
+            border: 4px solid darkcyan;
+            /* height: 60vh; */
+
+        }
+
+        main::after{
+            content:"";
+            clear: both;
+            display: block;
+        }
+
+        main section{
+            border: 4px solid darkorange;
+            height:58vh;
+            float:left;
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Empresa</a></li>
+                <li><a href="#">Equipo</a></li>
+                <li><a href="#">Contacto</a></li>
+                <!-- <div class="clear"></div> -->
+            </ul>
+        </nav>
+        
+    </header>
+
+    <main>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
