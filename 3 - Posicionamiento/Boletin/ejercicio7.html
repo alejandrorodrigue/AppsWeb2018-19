@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+        <style>
+        
+             header{
+                    background-color: darkcyan;
+                    color: white;
+                    text-align: center;
+                    }
+
+            main{
+                display:flex;
+                flex-wrap: wrap;
+            }
+
+            section.uno{
+                background-color: coral;
+                flex:1 1 20%;
+                order: 1;
+            }
+            section.dos{
+                background-color: cornflowerblue;
+                flex:3 1 60%;
+                order: 2;
+
+            }
+            section.tres{
+                background-color: chartreuse;
+                flex:1 1 20%;
+                order: 3;
+            }
+
+            footer{
+                background-color: gold;
+                height: 10vh;
+            }
+
+            @media screen and (max-width:768px){
+                section.dos{
+                   order: 1;
+                   flex:100%;
+                }
+            }
+
+            @media screen and (max-width:540px){
+                section.uno{
+                    flex: 100%;
+                }
+
+                section.dos{
+                    flex: 100%;
+                }
+            }
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <header>
+                <h1>HEADER</h1>
+        </header>
+        <main>
+
+                <section class="dos">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Ratione quod aspernatur nostrum delectus esse voluptatibus 
+                             necessitatibus, iure doloribus enim quia rerum 
+                            asperiores explicabo autem dolore neque placeat nihil magni ad.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Ratione quod aspernatur nostrum delectus esse voluptatibus 
+                                    necessitatibus, iure doloribus enim quia rerum 
+                                   asperiores explicabo autem dolore neque placeat nihil magni ad.</p>
+                                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Ratione quod aspernatur nostrum delectus esse voluptatibus 
+                                        necessitatibus, iure doloribus enim quia rerum 
+                                       asperiores explicabo autem dolore neque placeat nihil magni ad.</p>
+                    </section>
+                <section class="uno">
+                    <h3>ASIDE 1</h3>
+                </section>
+                
+                <section class="tres">
+                    <h3>ASIDE 2</h3>
+                </section>
+        </main>
+        <footer>
+
+        </footer>
+        
+    </div>
+</body>
+</html>
