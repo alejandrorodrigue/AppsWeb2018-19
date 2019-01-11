@@ -7,6 +7,9 @@
     <title>Document</title>
 
     <style>
+        *{
+            box-sizing: border-box;
+        }
     .container{
             width: 90%;
             margin: auto;
@@ -85,6 +88,61 @@
             color: white;
             font-weight: bold;
             padding:.7em .3em;
+        }
+
+        @media screen and (max-width:768px){
+            header{
+                flex-direction: column;
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+
+            header h1{
+                text-align:center;
+            }
+
+            header ul{
+                display: flex;
+            }
+
+            header ul li{
+                width: 25%;
+            }
+
+            .contenedorMain{
+                flex-direction: column;
+            }
+
+            main{
+                width: 100%;
+            }
+            aside{
+                display: flex;
+                width: 100%;
+                /* justify-content: space-around; */
+            }
+
+            aside div.lateral{
+                 width: 45%; 
+                
+            }
+
+            @media screen and (max-width:580px){
+                footer{
+                     flex-wrap: wrap; 
+                    /* flex-direction: column; */
+                }
+
+                footer ul:first-child{
+                    display: flex;
+
+                }
+
+                footer ul:nth-child(2){
+                        flex-basis: 40%;
+                        
+                }
+            }
         }
     </style>
 </head>

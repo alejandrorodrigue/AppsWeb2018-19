@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            //Declaro variable para almacenar dato del usuario
+            //El prompt siempre devuelve el dato introducido como un String
+            
+            var numero = parseInt(prompt("Introduzca un número:"));
+            //Que sucede si el usuario se equivoca y mete caracteres
+            //La variable numero almacena el valor NaN , lo validaremos más adelante con un if
+
+            //Modificar una ariable
+            numero = numero + 10;
+            //numero+=10;
+
+            document.write("<p> Numero = " + numero + "</p>");
+
+            //Declarar array y almacenar 3 numeros
+            var matriz = [8,1,2];
+            // matriz[0] = 9;
+            // matriz[1] = 2;
+            // matriz[2] = 4;
+             var suma = matriz[0] + matriz[1] + matriz[2];
+
+             //Mostrar por consola
+             
+             console.log("numero es de tipo : " + typeof numero);
+             console.log("suma es de tipo : " + typeof suma);
+             console.log("matriz es de tipo : " + typeof matriz);
+
+
+
+
+
+    </script>
+
+    <script>
+        alert("Estoy en otro script" + numero);
+    </script>
+</body>
+</html>

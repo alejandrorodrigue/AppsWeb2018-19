@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <script src="4 - Javascript/milibreriajava.js"></script> -->
+    <title>Document</title>
+</head>
+<body>
+        <p onclick="alert('Parrafo interactivo');"> Parrafo que abre ventana</p>
+        <p style="background-color: gold;">Expulsión directa</p>
+    <script>
+        alert('Hola Mundo con Javascript');
+       
+        // Declaracion de variables
+        var numero1= 8;
+        var numero2="a";
+        var resultado = numero2/0; "NaN"
+        document.write("<p>El resultado es : " + resultado + "</p>");
+        document.write("<p style='color:cadetBlue;'>Parrafo con colores</p>")
+        var bgcolor = "gray";
+        var colorFuente = prompt("Introduzca el color en inglés:");
+        document.write("<p style='background-color:"+bgcolor+";color:"+colorFuente+";'>Modificando color de fondo</p>")
+
+        var n1 = parseInt(prompt("intro n1"));
+        if(isNaN(n1)){
+            alert("Error");
+        }
+        var n2 = parseInt(prompt("intro n2"));
+        var sumar = n1 + n2;
+        if(isNaN(sumar)){
+
+        }
+        document.write("<h2>El resultado de la suma es : " + sumar + "</h2>");
+    </script>
+</body>
+</html>

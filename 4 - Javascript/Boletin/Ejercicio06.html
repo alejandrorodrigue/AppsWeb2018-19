@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        do{
+        error = 0;
+        var n1 = parseFloat(prompt("Intro numero 1"));
+        var n2 = parseFloat(prompt("Intro Numero 2"));
+
+        var operacion = prompt("intro operacion: + , - , * ,/");
+
+        switch(operacion){
+            case '+':
+                resultado = n1 + n2;
+                break;
+            case '-':
+                resultado = n1 - n2;
+                break;
+            case '*':
+                resultado = n1*n2;
+                break;
+            case '/':
+                if(n2==0){
+                resultado = "No se puede dividir entre cero";
+                }
+                else{
+                    resultado = n1/n2;
+                    //Comprobar si es un entero
+                    if(!Number.isInteger(resultado)){
+                        resultado = Math.floor(resultado);
+                    }
+                }
+                break;
+            default:
+                resultado = "Operación errónea";
+                error = 1;
+                break;
+        }
+
+        if(isNaN(resultado)){
+            alert("Opercion no se pudo realizar");
+            error = 1;
+        }
+        else{
+        document.write(resultado);
+        }
+    }
+    while(error==1);
+
+
+        </script>
+</body>
+</html>
