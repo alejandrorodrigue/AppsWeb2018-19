@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var figura = prompt("Introduce la figura:");
+        var area;
+        if(figura=="Triangulo"){
+            var altura = parseFloat(prompt("Intro altura"));
+            var base = parseFloat(prompt("Intro base:"));
+
+            area = (base*altura)/2;
+
+        }
+        else if(figura == "Cuadrado"){
+            var lado = parseFloat("Intro lado del cuadrado:");
+            area = Math.pow(lado,2);
+        }
+
+        else if(figura == "Circulo"){
+            var radio = parseFloat(prompt("Intro radio:"));
+          //  const PI = 3.1415;
+            area = PI*radio*radio;
+        }
+
+        else{
+           // PI = 9;
+            alert("No se reconoce la figura");
+        }
+
+        if(typeof area !="undefined"){
+            alert("El area es : " + area);
+        }
+    
+        
+    </script>
+</body>
+</html>
