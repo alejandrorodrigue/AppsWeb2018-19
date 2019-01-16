@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        function mostrarMensaje(mensaje){
+           if(typeof mensaje =="undefined"){
+               alert("Mensaje de prueba");
+           }
+           else{
+            alert(mensaje);
+        }
+        }
+
+        var coche = {
+            matricula:"1234ERT",
+            marca:"Ford",
+            modelo:"Focus"
+        };
+        var fecha = new Date();
+        //Llamada a la funcion
+        mostrarMensaje("Aprendiendo funciones");
+
+        mostrarMensaje(23);
+        mostrarMensaje(coche.matricula);
+
+
+        //Explicacion variables locales
+
+        function suma(x,y,operacion){
+             resultado = 90;
+            switch(operacion){
+                case '+':
+                   resultado = x + y;
+                break;
+                case '-':
+                    resultado = x - y;
+                    break;
+            }
+
+        }
+
+        // resultado = 6;
+        // suma(4,3,'+');
+
+        alert(resultado);
+
+
+    
+    </script>
+</body>
+</html>

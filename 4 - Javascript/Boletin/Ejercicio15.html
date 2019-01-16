@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .hora{
+            font-size:3em;
+            color: chartreuse;
+        }
+
+        .minutos{
+            font-size: 3em;
+            color: cadetblue;
+        }
+
+        .segundos{
+            font-size: 3em;
+            color: brown;
+        }
+    </style>
+    <script>
+           window.onload = darLaHora;
+    
+    function darLaHora(){
+    var fecha = new Date();
+    var hora = fecha.getHours();
+    var minutos = fecha.getMinutes();
+    var segundos = fecha.getSeconds();
+
+    document.write("<span class='hora'>" + hora + " :</span>  <span class='minutos'>" + minutos + "</span><span class='segundos'>" + segundos + "</span>");
+    }
+   
+    setInterval(darLaHora,1000);
+
+        </script>
+</head>
+<body>
+    
+</body>
+
+</html>
