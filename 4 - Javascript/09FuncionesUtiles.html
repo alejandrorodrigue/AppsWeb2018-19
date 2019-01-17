@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var cadena = "Hola Mundo";
+        var posicion = cadena.indexOf('Ho',4);
+        var subCadena = cadena.substring(1,5);
+        var palabras = cadena.split(" ")[0].substring(2);
+
+        var p = cadena.includes("Ho");
+
+        var alumnos = ["Yago","Martin","Daniel","Alvaro"];
+       var alumnoEliminado =  alumnos.pop();
+
+
+        var series = ["Juego de Tronos","Preacher","Stranger Things","House of Cards"];
+
+        //Eliminar serie posicion 1 y no añadir
+        series.splice(1,1);
+
+        //Eliminar serie en posicion 1 y añadir otra serie en esa pos
+        series.splice(1,1,"Nueva serie");
+
+        //Eliminar 2 series en posicion 1 y añadir otra serie en esa pos
+        series.splice(10,2,"Nueva serie","NS2");
+
+        //Solo añadir series en posicion 1 
+        series.splice(2,0,"Nueva serie","Nueva serie 2");
+
+
+
+
+
+    </script>
+</body>
+</html>
