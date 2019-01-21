@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numeros=[];
+
+
+        function guardarNumero(n){
+            if(isNaN(n)==false){
+                numeros.push(n);
+
+            }
+        }
+
+        //3 llamadas a la funcion
+        guardarNumero(23);
+        guardarNumero("asdf");
+        guardarNumero("123ad");
+        guardarNumero("123");
+        guardarNumero(4);
+        guardarNumero(-45);
+
+         document.write(numeros.join(","));
+        var negativos = [];
+
+        for(var i = 0;i<numeros.length;i++){
+            if(numeros[i]<0){
+                negativos.push(numeros[i]);
+            }
+        }
+
+
+
+         //Mostrar numeros negativos usando filter
+
+        function getNegativos(adrian){
+            return adrian < 0;
+        }
+
+        var negativos = numeros.filter(getNegativos);
+        var numerospares = numeros.filter(function(n){
+                return n%2==0;
+        });
+        alert(numerospares.join(" "));
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
