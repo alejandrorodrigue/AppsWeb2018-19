@@ -30,7 +30,11 @@
     var minutos = fecha.getMinutes();
     var segundos = fecha.getSeconds();
 
-    document.write("<span class='hora'>" + hora + " :</span>  <span class='minutos'>" + minutos + "</span><span class='segundos'>" + segundos + "</span>");
+    // document.write("<span style='color:red;'>" + hora + " :</span>  <span class='minutos'>" + minutos + "</span><span class='segundos'>" + segundos + "</span>");
+    
+    var elementoH2 = document.getElementById("reloj");
+    elementoH2.innerHTML = "<span class='hora'>" + hora + " :</span>  <span class='minutos'>" + minutos + "</span><span class='segundos'>" + segundos + "</span>";
+
     }
    
     setInterval(darLaHora,1000);
@@ -38,7 +42,7 @@
         </script>
 </head>
 <body>
-    
+    <h2 id="reloj"></h2>
 </body>
 
 </html>
