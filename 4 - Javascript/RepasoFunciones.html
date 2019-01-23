@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Funciones Matrices</h2>
+    <ul>
+        <li>pop()</li>
+        <li>push()</li>
+        <li>unshift()</li>
+        <li>shift()</li>
+        <li>slice(inicio,limite)</li>
+        <li>splice(posicion,numeroElementosEliminar,elementosNuevos?)</li>
+        <li>matriz.indexOf(elemento a buscar)</li>
+        <li>matriz.find(funcion)</li>
+        <li>matriz.filter(funcion)</li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+<script>
+    var matriz=["Alvaro",7,"DDR","Yago","RRS"];
+
+    var resultado = matriz.filter(get4Letras);
+    alert(resultado);
+    function get4Letras(n){
+        // nString = String(n);
+        return n.length < 4;
+    }
+</script>
+
+</html>

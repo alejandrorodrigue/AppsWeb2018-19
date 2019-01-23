@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .numero{
+            text-align: center;
+            font-size:3rem;
+            color:cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <p id="parrafo" class="numero"></p>
+</body>
+<script>
+    var contador = 10;
+    function cuentaAtras(){
+        //Escribir en el parrafo
+        var parrafo = document.getElementById("parrafo");
+        parrafo.innerText = contador;
+        contador--;
+        if(contador == -1){
+            clearInterval(id);
+        }
+    }
+
+   var id= setInterval(cuentaAtras,850);
+
+    cuentaAtras();
+</script>
+</html>
