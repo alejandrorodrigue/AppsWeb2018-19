@@ -53,6 +53,55 @@
         // nString = String(n);
         return n.length < 4;
     }
+
+
+    // A partir de esta matriz
+    var dnis=["1234567R","101010101E","19291219V"];
+    //a.) Mostrar aquellos que contengan un cero
+
+    //MAnera clásica
+
+        for(var i = 0;i<dnis.length;i++){
+            if(dnis[i].includes("0")){
+                console.log(dnis[i]);
+            }
+        }
+
+    //Manera pro
+    function getCeros(n){
+        return n.includes("0");
+    }
+
+    var dnisConCeros = dnis.filter(getCeros);
+
+    //b.) Buscar un determinado DNI y sustituirlo por otro
+    //c.)Buscar la posicion de un dni y en esa posicion añadir dos nuevos dnis.
+    var salarios = [930,783,802,1345,2900];
+    //Crear una matriz con los salarios por debajo del nuevo salario minimo (900) y 
+    //mostrar dicha matriz con sus elementos separados por un gion
+
+    //Manera clasica
+    var salariosBajos = [];
+
+    for(var i = 0;i< salarios.length;i++){
+        if(salarios[i]< 900){
+            salariosBajos.push(salarios[i]);
+        }
+    }
+
+    //Manera pro
+
+    function getSalariosBajos(salario){
+        return salario < 900;
+    }
+
+    salariosBajos = salarios.filter(getSalariosBajos);
+
+    alert(salariosBajos.join("-"));
+
+
 </script>
+
+
 
 </html>
