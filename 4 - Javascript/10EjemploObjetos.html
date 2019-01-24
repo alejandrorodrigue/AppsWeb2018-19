@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Crear un objeto de forma puntual
+        //Notacion json
+        var alumno = {
+            nombre:"Natan",
+            apellidos:"Montanheiro Oscar",
+            edad:18,
+            nota:8.5,
+            bajarNota:function(){
+                this.nota-=1;
+            },
+            subirNota:function(){
+                this.nota+=0.2;
+            },
+            dni:"12345678S"
+        }
+
+        alumno.apellidos = "Otro apellido";
+
+        alert(alumno["nombre"]);
+
+        alumno.bajarNota();
+
+        alumno.media = 5.5;
+    
+        alumno.EDad = 19;
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Definir un prototipo para las variables de tipo coche
+        //Un prototipo en javascript es una funcion
+        //Vamos a definir el prototipo para los objetos coche
+
+        function Coche(marca,modelo,precio,color){
+            this.marca = marca;
+            this.modelo = modelo;
+            this.precio = precio;
+            this.color = color;
+            descuento=function(){
+                return this.precio*0.1;
+            }
+
+        }
+
+        function Coche(marca){
+            this.marca = marca;
+        }
+        var cocheVacio = new Coche("Porsche");
+        var miCoche = new Coche("Ford","Fiesta",10000,"Blanco");
+        var otroCoche = new Coche("Peugeot","308-Premium",12000,"Negro");
+        miCoche.emision = 23;
+
+    
+    </script>
+</body>
+</html>
