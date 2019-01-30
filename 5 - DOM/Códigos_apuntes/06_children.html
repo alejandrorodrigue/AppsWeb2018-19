@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+</head>
+<body>
+<header>
+	<h1>Simple <span>HTML5</span> blog</h1>
+</header>
+<nav id="miNav">
+  <header class ="offscreen">
+  		<h2> Navigation menu </h2>
+  </header>
+	<ul>
+		<li><span>Blog</span></li>
+		<li><a href="">About</a></li>
+		<li><a href="">Contact</a></li>
+	</ul>
+</nav>
+</body>
+<script type="text/javascript">
+	
+	var hijosDelBody = document.body.children;
+	alert(hijosDelBody.length);
+	
+	
+	for (var i = 0; i < hijosDelBody.length; i++) {
+		alert(hijosDelBody[i].nodeName);
+	}
+
+	var c = document.getElementById("miNav").children.length;
+
+</script>
+
+</html>

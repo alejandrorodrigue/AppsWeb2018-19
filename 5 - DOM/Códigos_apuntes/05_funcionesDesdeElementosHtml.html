@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo DOM</title>
+	
+</head>
+<body>
+<p> El DOM es <b>chachi</b></p>
+<div>
+	<ul>
+		<li> Elemento 1 </li>
+		<li> Elemento 2 </li>
+		</ul>
+		</div>
+
+		<div>
+		<p id="hola"> Esto es un párrafo 
+		</p>
+		<ol id="chachi">
+		<li> Elemento ol1</li>
+		<li> Elemento ol2</li>
+		</ol>
+
+		<ol>
+		<li> Elemento ol1</li>
+		<li> Elemento ol2</li>
+		</ol>
+		</div>
+		<p id="prueba"> Este parrafo es una prueba de lo fácil que es programar en JavaScript</p>
+
+		<h2 id = "prueba2"></h2>
+
+</body>
+<script type="text/javascript">
+	//Obtengo el elemento ol
+	var olChachi = document.getElementById("chachi");
+
+	//Obtener los lis de este ol
+
+	var lisDeOlChachi = olChachi.getElementsByTagName("li");
+
+	//Se puede hacer en una sola línea
+
+	document.getElementById("chachi").getElementsByTagName("li");
+</script>
+</html>

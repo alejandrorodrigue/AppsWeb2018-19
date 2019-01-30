@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form name = "f1" >
+<label for="nombre"> Escriba su nombre </label><input type = "text" id="nombre" name = "nombre" size="30"/><br><br>
+
+<input type="button" id="btnValidar" name="boton" value="validar"> <br><br>
+</form>
+</body>
+<script type="text/javascript">
+
+var boton = document.getElementById("btnValidar");
+
+	boton.onclick = validar;
+
+	function validar(){
+		var nombre = document.f1.nombre.value;
+		
+		if(nombre==""){
+			alert("Debe de rellenar el campo nombre");
+		}
+	}
+</script>
+</html>

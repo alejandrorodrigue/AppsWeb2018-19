@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form name = "f1" action="datos.php" method="post">
+<p><label for="nombre"> Escriba su nombre </label><input type = "text" id="nombre" name = "nombre" size="30"/></p>
+<p><label for="correo"> Correo electr</label>
+<p><input type = "text" id="correo" size="30"/></p>
+
+<p><label for="saldo"> Saldo disponible&nbsp;&nbsp;&nbsp;</label>  <input type = "text" name = "saldo" size="10"/></p>
+
+<p>Escoja dos provincias:</p>
+
+<input type = "checkbox" value="pontevedra" name = "pontevedra"/> Pontevedra<br>
+<input type = "checkbox" value="coru" name = "coru"/> Coru <br>
+<input type = "checkbox" value="ourense" name = "ourense"/> Ourense <br>
+<input type = "checkbox" value="lugo" name = "lugo"/> Lugo <br>
+
+<p>Escoja forma de pago:</p>
+<input type = "radio" name="formaPago" value="contado"/>Al contado <br>
+<input type="radio" name="formaPago" value="dosPlazos"/> Dos plazos <br><br>
+
+<p> Seleccione un banco </p>
+
+<select name="bancos">
+	<option value="bbva"> BBVA </option>
+	<option value="abanca"> ABanca </option>
+	<option value="santander"> Santander </option>
+</select>
+<br>
+<input type="button" id="btnValidar" name="boton" value="validar"> <br><br>
+</form>
+</body>
+<script type="text/javascript">
+	var boton = document.getElementById("btnValidar");
+
+	
+	boton.onclick = function(){
+
+		var nombre = document.f1.nombre.value;
+		var correo = document.forms["f1"].correo.value;
+		var saldo = document.forms["f1"]["saldo"].value;
+
+		 var provincias= [];
+
+		if(document.f1.pontevedra.checked){
+			provincias.push(document.f1.pontevedra.value);
+		}
+
+		if(document.f1.coru.checked){
+			provincias.push(document.f1.coru.value);
+		}
+
+		if(document.f1.ourense.checked){
+			provincias.push(document.f1.ourense.value);
+		}
+
+		var formaPago = document.f1.formaPago.value;
+
+		var banco = document.f1.bancos.value;
+
+		document.write("<p> Provincias seleccionadas: </p><br>" + provincias.length);
+
+		for (var i = 0; i < provincias.length; i++) {
+			document.write(provincias[i] + "<br>");
+		}
+	}
+</script>
+</html>

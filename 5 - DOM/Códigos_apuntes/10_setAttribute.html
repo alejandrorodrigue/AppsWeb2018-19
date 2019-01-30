@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modificar atributos html</title>
+	<meta charset="utf-8">
+	
+
+</head>
+<body>
+<header>
+	<h1>Simple <span>HTML5</span> blog</h1>
+</header>
+<nav id="miNav">
+  <header class ="offscreen">
+  		<h2> Navigation menu </h2>
+  </header>
+	<ul>
+		<li><span>Blog</span></li>
+		<li><a href="">About</a></li>
+		<li><a href="">Contact</a></li>
+	</ul>
+</nav>
+</body>
+<script type="text/javascript">
+	
+	var elementosNav = document.getElementsByClassName("offscreen");
+
+	elementosNav[0].setAttribute("id","nuevoId");
+	elementosNav[0].setAttribute("class","nuevaClase");
+</script>
+</html>

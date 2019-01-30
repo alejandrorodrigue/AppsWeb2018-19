@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #activo{
+            font-weight: bold;
+            font-size:1.2rem;
+        }
+
+        .importante{
+            color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <ul id="principal">
+        <li>Elemento 1
+
+            <!-- Esto es un comentario -->
+        </li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+    </ul>
+
+    <script>
+        var lisHijosdeUl = document.querySelectorAll("ul#principal >li");
+        var  lisHijosdeUl2 = document.getElementById("principal").getElementsByTagName("li");
+        var lisHijosUl3 = document.getElementById("principal").children;
+
+        //Cambiar estilos
+
+        //Al primer li
+        lisHijosdeUl.style.color = "red";
+        
+        //Cambiar un atributo
+        lisHijosdeUl[0].id="activo";
+
+        //Gestion clases
+        lisHijosdeUl[0].className = "importante";
+        lisHijosdeUl[0].classList.add("otra");
+        lisHijosdeUl[0].classList.remove("otra");
+        lisHijosdeUl[0].classList.toggle("otra");
+
+        //Gestion atributos mediante funcion setAttribute
+        lisHijosdeUl[0].setAttribute("class","otra");
+        lisHijosdeUl[0].setAttribute("name","li1");
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

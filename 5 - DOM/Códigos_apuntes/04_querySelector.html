@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<nav>
+  <header id="header1" class ="offscreen">
+  		<h2> Navigation menu </h2>
+  </header>
+	<ul>
+		<li><span>Blog</span></li>
+		<li><a href="">About</a></li>
+		<li><a href="">Contact</a></li>
+	</ul>
+</nav>
+<section>
+  <header id="header2">    
+    <h1>Blog posts for April 2012</h1>    
+  </header>
+  <article>
+    <header id="header3">
+      <h1><a href="">Information about this example</a></h1>
+      This example is a modified version of <a href="#">blog</a>
+    </header>
+    <p>Try to move the mouse on different elements. The structure will be highlighted and you will be able to see the different inclusions of elements one in each other. If you move the cursor to this sentence, it will be highlighted in dark grey, showing the presence of an &lt;article&gt; element, surrounded by a &lt;section&gt; element (light grey), etc. So we have some articles in a single section element. The page title at the top is a &lt;header&gt; element, while  the tag cloud on the right is a &lt;aside&gt; element. The main menu on top (with Blog, About, Contact) is a &lt;nav&gt; element.</p>
+     <figure>
+  <img src="http://www.fredcavazza.net/files/2009/09/html5_structure.png" alt="Example of HTML5 structuring tags" />
+  <figcaption>
+    Fig. 1 : an example of how new structuring elements could be used. This page put a &lt;nav&gt; on top, and does not have headers and footer for each article, like in this figure, but it could... By the way, this is a &lt;figcaption&gt; inside a &lt;figure&gt; element...
+  </figcaption>
+</figure>
+      
+  </article>
+</section>
+</body>
+<script type="text/javascript">
+	var enlacesli = document.querySelectorAll("li a");
+	var primerEnlaceli = document.querySelector("li a");
+
+	document.write("<p> Hay " + enlacesli.length + " enlaces dentro de etiquetas li");
+	document.write("<p>El primer enlace contiene el texto " + primerEnlaceli.innerHTML);
+
+</script>
+</body>
+</html>

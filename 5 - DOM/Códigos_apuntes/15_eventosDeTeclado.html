@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1> Keypress </h1>
+<p id="keypress"></p>
+
+<h1> Keydown</h1>
+<p id="keydown"></p>
+</body>
+<script type="text/javascript">
+	
+document.body.onkeypress=getTecla;
+document.body.onkeydown = getTeclaEspecial;
+
+function getTecla(evento){
+
+	var codigo = evento.keyCode;
+	var caracter = evento.charCode;
+
+	var p = document.getElementById("keypress");
+	p.innerHTML +=evento.type + " keyCode: " + codigo + " charCode: " + caracter + "<br>";
+
+}
+
+function getTeclaEspecial(evento){
+	var codigo = evento.keyCode;
+	var caracter = evento.charCode;
+
+	var p = document.getElementById("keydown");
+	p.innerHTML +=evento.type + " keyCode: " + codigo + " charCode: " + caracter + "<br>";
+}
+
+
+</script>
+</html>

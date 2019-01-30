@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form name = "f1">
+<input name = "caja1" type = "text" size = "20" onchange="validar(this.value);" >
+<input name = "caja2" type = "text" size = "20" >
+</form>
+</body>
+<script type="text/javascript">
+	
+	function validar(texto){
+
+			if(isNaN(texto))
+					alert("Debe de introducir números");
+			
+		
+	}
+</script>
+</html>

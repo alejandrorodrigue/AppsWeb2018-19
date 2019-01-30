@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form>
+<input id="id1" type="number" min="100" max="300">
+<input type = "button" id="btn1" value="Pulsar!">OK</button>
+
+<p id="demo"></p>
+</form>
+</body>
+<script type="text/javascript">
+
+
+document.getElementById("btn1").onclick = miFuncion;
+function miFuncion() {
+    var inpObj = document.getElementById("id1");
+    if (inpObj.checkValidity() == false) {
+        document.getElementById("demo").innerHTML = inpObj.validationMessage;
+    }
+}
+</script>
+</html>

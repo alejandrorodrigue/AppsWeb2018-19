@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#interior{
+			width: 50%;
+			background-color:grey;
+			height: 450px;
+			float: left;
+		}
+
+		#interiorDerecha{
+			width: 50%;
+			background-color: orange;
+			height: 450px;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+<div id="div1">
+	<div id="interior">
+	</div>
+	<div id ="interiorDerecha">
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+	
+document.getElementById("interior").onmousedown = getCoordenadas;
+document.getElementById("interiorDerecha").onmousedown = getCoordenadas;
+
+function getCoordenadas(evento){
+	alert(evento.clientX + " " + evento.clientY);
+}
+
+
+
+
+</script>
+</html>

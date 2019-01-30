@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <p id="especial"><a href="#"> Enlace 1</a>Este es el párrafo 1</p>
+        <p><a href="#"> Enlace 2</a>Este es el párrafo 2</p>
+        <p class="deficitDeAtencion">
+            Da igual lo que escriba porque nadie se entera , suspenderá el 80% de la clase ,
+            una vez más.
+        </p>
+    </div>
+
+    <div class="container">
+            <p id="especial"><a href="#"> Enlace 1</a>Este es el párrafo 1</p>
+            <p><a href="#"> Enlace 2</a>Este es el párrafo 2</p>
+            <p class="deficitDeAtencion">
+                Da igual lo que escriba porque nadie se entera , suspenderá el 80% de la clase ,
+                una vez más.
+            </p>
+        </div>
+</body>
+<script>
+
+    window.onload=function(){
+    //Acceso a los elemento html de document.
+    //Elementos con acceso directo
+    var elementoBody = document.body;
+    var enlaces = document.links;
+
+    alert("La pagina tiene : " + enlaces.length + " enlaces.")
+
+
+    //Funciones de acceso a nodos html
+    //Acceder a elemento por id
+    var parrafo = document.getElementById("especial");
+    parrafo.style.color="Red";
+
+    //Acceder a elementos con el mismo class
+    var deficitDeAtencion = document.getElementsByClassName("deficitDeAtencion");
+    deficitDeAtencion[0].style.color="Blue";
+
+    //Por el tipo de etiqueta
+    var divs = document.getElementsByTagName("div");
+
+    //Por selector css
+    //querySelector("selector")-->Devuelve el primer elemento que macha con ese selector
+    //querySelectorAll("selector")-->Devuelve los elementos que machan con ese selector
+
+    //Parrafo con clase deficitDeAtencion
+    var p = document.querySelector("p.deficitDeAtencion");
+    var ps = document.querySelectorAll("p.deficitDeAtencion");
+
+    
+    //Estas funciones(menos ...ById) pueden ser llamadas desde cualquier elemento html
+
+    var parrafosPrimerDiv = divs[0].getElementsByTagName("p");
+
+    for(var i = 0;i<parrafosPrimerDiv.length;i++){
+        parrafosPrimerDiv[i].innerText="Soy experto en ciberseguridad";
+        parrafosPrimerDiv[i].style.fontSize = "3rem";
+    }
+
+    //Modificar id del primer parrafo del primer div
+    parrafosPrimerDiv[0].id="Alcachofa";
+
+    for(var i = 0;i<enlaces.length;i++){
+        enlaces[i].href="http://ciclosmontecastelo.com/";
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

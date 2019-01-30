@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.desplazado{
+			position: relative;
+			left:2000px;
+		}
+	</style>
+</head>
+<body>
+<div id="d1">
+<p> Parrafo dentro de div 1</p>
+</div>
+<form name="f1">
+<input type = "text" name = "caja1" id="caja1"/>
+<p class="desplazado"> Debe de rellenar este campo </p>
+<input type = "button" id="btn1" value = "pulsar"/>
+</form>
+
+</body>
+<script type="text/javascript">
+	
+document.getElementById("btn1").onclick = validar;
+
+//Atención a la filosofía de no pasar parámetros:Función poco reutilizable
+function validar(){
+var valor = document.getElementById("caja1").value;
+if(valor==""){
+	
+	document.getElementById("caja1").focus();
+	document.getElementsByClassName("desplazado")[0].style.left = "180px";
+	document.getElementsByClassName("desplazado")[0].style.top = "-30px";
+
+}
+}
+
+	/*document.getElementById("d1").onmouseover = miFuncion;
+	document.getElementById("d1").onmouseout = miFuncion;
+    function miFuncion(evento){
+    	if(evento.type == "mouseover")
+    	this.style.backgroundColor = "red";
+    else
+    	this.style.backgroundColor = "white";
+    }
+    */
+
+</script>
+</html>

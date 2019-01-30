@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		
+		window.onload = function() {
+
+			var primerHijo = document.body.firstChild;
+			var ultimoHijo = document.body.lastChild;
+			var primerHijoelemento = document.body.firstElementChild;
+			var ultimoHijoElemento = document.body.lastElementChild;
+			document.write("Primer nodo hijo: " + primerHijo.nodeName + "<br>");
+			document.write("Último nodo hijo: " + ultimoHijo.nodeName + "<br>");
+			document.write("Primer nodo elemento hijo: " + primerHijoelemento.nodeName + "<br>");
+			document.write("Último nodo elemento hijo: " + ultimoHijoElemento.nodeName + "<br>");
+		}
+	</script>
+</head>
+<body>
+<header>
+	<h1>Simple <span>HTML5</span> blog</h1>
+</header>
+<nav id="miNav">
+  <header class ="offscreen">
+  		<h2> Navigation menu </h2>
+  </header>
+	<ul>
+		<li><span>Blog</span></li>
+		<li><a href="">About</a></li>
+		<li><a href="">Contact</a></li>
+	</ul>
+</nav>
+</body>
+
+</html>

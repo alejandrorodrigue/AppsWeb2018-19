@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p> Haz click sobre este parrafo </p>
+</body>
+<script type="text/javascript">
+	
+	var contador = 0;
+	document.getElementsByTagName("p")[0].onclick = function(){
+		contador++;
+		this.innerHTML = "Haz click sobre este parrafo"
+		this.innerHTML = this.innerHTML + " " + contador;
+
+	}
+</script>
+</html>

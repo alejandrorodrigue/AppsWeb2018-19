@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<ul>
+	<li id="li1">Elemento 1</li>
+	<li id="li2">Elemento 2</li>
+	<li id="li3">Elemento 3</li>
+</ul>
+<input type="button" name="boton" id="btn1" value="eliminar li1">
+</body>
+<script type="text/javascript">
+	
+	
+	document.getElementById("btn1").onclick = function(){
+		var padre = document.getElementsByTagName("ul")[0];
+		var hijo = document.getElementById("li1");
+		padre.removeChild(hijo);
+
+	}
+
+</script>
+</html>

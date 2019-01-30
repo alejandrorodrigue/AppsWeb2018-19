@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<ul>
+<li> Elemento 1</li>
+<li> Elemento 2</li>
+</ul>
+<input type="button" value="Añadir a la lista" onclick="crearLi();">
+</body>
+<script type="text/javascript">
+	function crearLi(){
+		var nuevoNodo = document.createElement("li");
+		var texto = document.createTextNode("Nuevo elemento");
+		nuevoNodo.appendChild(texto);
+
+		var lista = document.getElementsByTagName("ul")[0];
+		lista.insertBefore(nuevoNodo,lista.childNodes[0]);
+	}
+</script>
+</html>

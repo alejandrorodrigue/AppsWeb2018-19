@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		
+		window.onload = function(){
+			document.getElementsByTagName("p")[0].onclick = function(){
+				alert("Clickaste amigo!");
+			}
+
+			document.getElementsByTagName("a")[0].onmouseover = f1;
+
+		};
+	</script>
+</head>
+<body>
+<p> Haz click en el parrafo</p>
+<a href = "#"> Pasa por encima del enace </a>
+</body>
+<script type="text/javascript">
+	
+	function f1(){
+		this.style.border = "1px solid blue";
+	}
+</script>
+</html>
