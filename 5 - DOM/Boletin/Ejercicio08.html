@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="jquery-3.3.1.js"></script>
+    <title>Document</title>
+    <style>
+        .textoGrande{
+            font-size: 1.2rem;
+            
+        }
+
+        .oculto{
+            display: none;
+        }
+
+        .modoDark{
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+    <script>
+
+        window.onload = function(){
+
+       
+            var boton8A = document.getElementById("btn8a");
+            boton8A.onclick = function(){
+                //Obtener parrafos
+                // var parrafos = document.getElementsByTagName("p");
+                // document.body.classList.toggle("modoDark");
+                // for(var i = 0;i<parrafos.length;i++){
+                //         parrafos[i].classList.toggle("textoGrande");
+                //         parrafos[i].classList.toggle("resaltado");
+                // }
+
+                //looping y chaining con jquery
+                $("p").css("color","blue")
+                .text("Hola");
+        
+                document.getElementsByTagName("p")[1].classList.toggle("oculto");
+        
+                
+        
+        
+        
+            }
+        
+            // document.getElementById("btn8a").style.backgroundColor="red";
+            $("#btn8a").css("backgroundColor","red");
+        }
+        </script>
+</head>
+<body>
+    <h2>Ejercicio 8</h2>
+<button id="btn8a" class="btn btn-primary"><i class="fas fa-palette"> Apartado A</i>
+</button>
+
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique eius possimus dolores iure illum repudiandae a, minima explicabo sunt, amet porro, ipsa ab deleniti dolorem tempora eveniet ex repellendus necessitatibus!</p>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo harum possimus odit, doloremque, deleniti repudiandae quis ipsum repellendus similique non vitae reprehenderit magni maxime voluptas excepturi sit nostrum autem! Impedit.</p>
+</body>
+
+</html>
