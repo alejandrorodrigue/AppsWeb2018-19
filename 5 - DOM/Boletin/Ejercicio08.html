@@ -28,30 +28,44 @@
         window.onload = function(){
 
        
-            var boton8A = document.getElementById("btn8a");
-            boton8A.onclick = function(){
-                //Obtener parrafos
-                // var parrafos = document.getElementsByTagName("p");
-                // document.body.classList.toggle("modoDark");
-                // for(var i = 0;i<parrafos.length;i++){
-                //         parrafos[i].classList.toggle("textoGrande");
-                //         parrafos[i].classList.toggle("resaltado");
-                // }
+            // var boton8A = document.getElementById("btn8a");
+            // boton8A.onclick = function(){
+            //     //Obtener parrafos
+            //     // var parrafos = document.getElementsByTagName("p");
+            //     // document.body.classList.toggle("modoDark");
+            //     // for(var i = 0;i<parrafos.length;i++){
+            //     //         parrafos[i].classList.toggle("textoGrande");
+            //     //         parrafos[i].classList.toggle("resaltado");
+            //     // }
 
-                //looping y chaining con jquery
-                $("p").css("color","blue")
-                .text("Hola");
+            //     //looping y chaining con jquery
+            //     $("p").css("color","blue")
+            //     .text("Hola");
         
-                document.getElementsByTagName("p")[1].classList.toggle("oculto");
-        
-                
-        
+            //     document.getElementsByTagName("p")[1].classList.toggle("oculto");
+             
         
         
-            }
+        
+            // }
         
             // document.getElementById("btn8a").style.backgroundColor="red";
-            $("#btn8a").css("backgroundColor","red");
+            // $("#btn8a").css("backgroundColor","red");
+
+
+            var parrafos = document.getElementsByTagName("p");
+
+            for(var i = 0;i<parrafos.length;i++){
+                parrafos[i].style.fontSize="1.2rem";
+            }
+
+            //Apartado b
+            var divsInterior = document.querySelectorAll("div.interior");
+
+            for(var i = 0;i<divsInterior.length;i++){
+                divsInterior[i].style.backgroundColor = "blue";
+            }
+
         }
         </script>
 </head>

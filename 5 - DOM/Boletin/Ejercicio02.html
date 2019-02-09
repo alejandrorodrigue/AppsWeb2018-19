@@ -1,0 +1,99 @@
+<html>
+<head>
+</head>
+<body>
+	<style type="text/css">
+		.oculto{
+			display:none;
+		}
+
+		.visible{
+			display: block;
+		}
+
+	</style>
+<div id="informacion" style="border:thin solid silver; padding:.5em">
+<p>Lorem ipsum dolor sit amet, <a href="http://prueba">consectetuer adipiscing
+elit</a>. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu,
+consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc,
+posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id,
+aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit
+convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus
+non, mi. <a href="http://prueba2">Fusce porta</a>. Duis pellentesque, felis eu
+adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non
+dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis
+scelerisque. Donec lacus neque, vehicula in, eleifend vitae, venenatis ac,
+felis. Donec arcu. Nam sed tortor nec ipsum aliquam ullamcorper. Duis accumsan
+metus eu urna. Aenean vitae enim. Integer lacus. Vestibulum venenatis erat eu
+odio. Praesent id metus.</p>
+<a id="enlace" href="#"> Seguir leyendo </a>
+<p class="oculto">Aenean at nisl. Maecenas egestas dapibus odio. Vestibulum ante ipsum primis
+in faucibus orci luctus et ultrices posuere cubilia Curae; Proin consequat
+auctor diam. <a href="http://prueba">Ut bibendum blandit est</a>. Curabitur
+vestibulum. Nunc malesuada porttitor sapien. Aenean a lacus et metus venenatis
+porta. Suspendisse cursus, sem non dapibus tincidunt, lorem magna porttitor
+felis, id sodales dolor dolor sed urna. Sed rutrum nulla vitae tellus. Sed quis
+eros nec lectus tempor lacinia. Aliquam nec lectus nec neque aliquet dictum.
+Etiam <a href="http://prueba3">consequat sem quis massa</a>. Donec aliquam
+euismod diam. In magna massa, mattis id, pellentesque sit amet, porta sit amet,
+lectus. Curabitur posuere. Aliquam in elit. Fusce condimentum, arcu in
+scelerisque lobortis, ante arcu scelerisque mi, at cursus mi risus sed
+tellus.</p>
+</div>
+
+</body>
+<script>
+    var numeroEnlaces = document.links.length;
+    var direccionPenultioEnlace = document.links[numeroEnlaces - 2].href;
+
+    var enlaces = document.links;
+    var contador = 0;
+    for(var i = 0;i<enlaces.length;i++){
+        if(enlaces[i].href.includes("prueba")){
+            contador++;
+        }
+    }
+    alert(contador);
+
+
+    //Enlaces segundo parrafo
+    var parrafos = document.querySelectorAll("p");
+    var enlacesP2 = parrafos[1].getElementsByTagName("a");
+
+    //Enlace seguir leyendo
+    var enlaceSeguir = document.getElementById("enlace");
+    var contador = 0;
+    enlaceSeguir.onclick = function(){
+        var ocultos = document.getElementsByClassName("oculto");
+        if(contador==0){
+        for(var i = 0;i<ocultos.length;i++){
+            
+                ocultos[i].classList.add("visible");
+                ocultos[i].classList.remove("oculto");
+            
+        }
+
+        this.innerText ="Ocultar texto";
+        contador+=1;
+        }
+        else{
+            var visibles = document.getElementsByClassName("visible");
+            for(var i = 0;i<visibles.length;i++){
+            
+                visibles[i].classList.add("oculto");
+                visibles[i].classList.remove("visible");
+        
+                }
+
+        this.innerText ="Seguir Leyendo";
+        contador=0;
+
+        }
+    }
+
+
+
+
+
+</script>
+</html>

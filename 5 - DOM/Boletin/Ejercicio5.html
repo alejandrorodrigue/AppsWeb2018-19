@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <section class="noticias">
+        <header>
+            <h2>Noticias</h2>
+        </header>
+
+        <h3>El abuelo rayacoches ingresado en prision</h3>
+        <article>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus beatae harum quos? Officia laboriosam eveniet obcaecati cupiditate explicabo facere? Laborum possimus similique cum fugit maiores aperiam, vitae consectetur non ea?
+        </article>
+        <h3> Los ñetas causan el terror en Pizarro</h3>
+        <article>
+            
+        </article>
+    </section>
+
+
+    <script>
+        //Obtengo las secciones
+        var secciones = document.querySelectorAll("section");
+
+        for(let i = 0;i<secciones.length;i++){
+            var hijos = secciones[i].children;
+            for(let j = 0;j<hijos.length;j++){
+                if(hijos[j].tagName=="ARTICLE"){
+                    hijos[j].classList.add("resaltado");
+                    break;
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

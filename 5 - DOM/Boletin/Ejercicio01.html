@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+		.principal{
+
+		}
+
+		.noticias{
+
+		}
+
+		.noticias nav.principal{
+
+		}
+
+		.resaltado{
+			font-size: 1.2em;
+			font-weight: bold;
+			background-color: aquamarine;
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+		<nav class="principal">
+			<ul>
+				<li> Inicio </li>
+				<li> Portfolio </li>
+				<li> Servicios </li>
+			</ul>
+		</nav>
+		</header>
+	<!-- Sección principal-->
+	<main>
+		<section class="noticias">
+			<nav class="principal">
+				<ul id="lista">
+					<li> Articulo 1 </li>
+					<li> Articulo 2 </li>
+					<li> Articulo 3 </li>
+				</ul>
+			</nav>
+			<article>
+				<h2> Titular </h2>
+				<p> Desarrollo de la noticia</p>
+			</article>
+		</section>
+	</main>
+	<!-- Pie de pagina -->
+	<footer>
+		<small><a href="#"> Enlace a </a></small>
+	</footer>
+</body>
+<script type="text/javascript">
+
+window.onload = function(){
+// Apartado a : Mostrar hijos del body
+ var hijosDelBody = document.body.children;
+ console.log("Hijos del body: " + hijosDelBody.length);
+
+//Apartado c: Coleccion elementos li dentro del main
+
+var lisDentroDelMain = document.querySelectorAll("main li");
+console.log(lisDentroDelMain);
+
+//Apartado e:
+var idLista = document.getElementById("lista");
+
+var padreIdLista = idLista.parentElement;
+
+var claseDelPadre = padreIdLista.className;
+alert(claseDelPadre);
+
+
+//Apartado f
+
+GetArticles("noticias");
+function GetArticles(clase){
+    //Obtener Seccion que pertenezca a esta clase
+    var seccion = document.querySelector("section." + clase);
+    var articulos = seccion.getElementsByTagName("article");
+
+    alert(articulos.length);
+
+    //Añadir borde a estos articulos
+
+    for(var i = 0;i<articulos.length;i++){
+        articulos[i].style.border="3px solid gold";
+    }
+
+   
+
+
+    //Otra manera de entender es obtener todos los articles de todas las secciones
+    var articulos2 = document.querySelectorAll("section." + clase + " article");
+}
+
+
+
+}
+
+</script>
+</html>

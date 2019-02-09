@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #sobrepass{
+            width:500px;
+            height:500px;
+            border:3px solid greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="sobrepass">
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium culpa sunt facilis beatae, unde nisi delectus perferendis aliquam officia voluptatem a quasi aut consectetur, eaque ab. Voluptatem nisi tenetur nam.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eius est numquam reiciendis laboriosam ratione veritatis, ea cum culpa aperiam molestias excepturi earum quisquam. Officiis numquam maxime error nobis culpa!</p>
+    </div>
+    
+    <script>
+        var divSobrepass = document.getElementById("sobrepass");
+        var parrafos = divSobrepass.getElementsByTagName("p");
+
+        // divSobrepass.onmouseover = function(){
+        //    for(var i = 0;i<parrafos.length;i++){
+        //     parrafos[i].style.fontWeight = "bold";
+        //    }
+            
+        // }
+
+        // divSobrepass.onmouseleave = function(){
+        //    for(var i = 0;i<parrafos.length;i++){
+        //     parrafos[i].style.fontWeight = "normal";
+        //    }
+            
+        // }
+
+
+            function cambiarParrafos(evento){
+                if(evento.type =="mouseover"){
+                    for(var i = 0;i<parrafos.length;i++){
+                        parrafos[i].style.fontWeight = "bold";
+                    }
+                }
+                else{
+                    for(var i = 0;i<parrafos.length;i++){
+                        parrafos[i].style.fontWeight = "normal";
+                    }
+                }
+            }
+
+
+            divSobrepass.onmouseleave = cambiarParrafos;
+            divSobrepass.onmouseover = cambiarParrafos;
+
+
+
+    </script>
+</body>
+</html>
