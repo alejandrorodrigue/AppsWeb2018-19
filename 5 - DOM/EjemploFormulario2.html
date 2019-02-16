@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form name = "f1" action="datos.php" method="post">
+<p><label for="nombre"> Escriba su nombre </label><input required type = "text" id="nombre" name = "nombre" size="30"/></p>
+<p><label for="correo"> Correo electr</label>
+<p><input type = "text" id="correo" size="30"/></p>
+
+<p><label for="saldo"> Saldo disponible&nbsp;&nbsp;&nbsp;</label>  <input type = "number" max="1900" min="900" name = "saldo" size="10"/></p>
+
+<p>Escoja dos provincias:</p>
+
+<input type = "checkbox" value="pontevedra" name = "pontevedra"/> Pontevedra<br>
+<input type = "checkbox" value="coru" name = "coru"/> Coru <br>
+<input type = "checkbox" value="ourense" name = "ourense"/> Ourense <br>
+<input type = "checkbox" value="lugo" name = "lugo"/> Lugo <br>
+
+<p>Escoja forma de pago:</p>
+<input type = "radio" name="formaPago" value="contado"/>Al contado <br>
+<input type="radio" name="formaPago" value="dosPlazos"/> Dos plazos <br><br>
+
+<p> Seleccione un banco </p>
+
+<select name="bancos">
+	<option value="bbva"> BBVA </option>
+	<option value="abanca"> ABanca </option>
+	<option value="santander"> Santander </option>
+</select>
+<br>
+<input type="submit" id="btnValidar" name="boton" value="validar"> <br><br>
+</form>
+</body>
+<script>
+
+    //Avisar de que el nombre es obligatorio cuando pierde el foco
+   
+    var txtNombre = document.f1.nombre;
+
+    txtNombre.onblur = function(){
+
+    
+     var txtNombreValor = document.f1.nombre.value;
+
+    if(txtNombreValor ==""){
+            this.style.border="1px solid red";
+            
+            alert("Debe añadir un nombre");
+            }
+            else{
+                this.style.border="2px solid gray";
+            }
+    }
+
+</script>
+</html>

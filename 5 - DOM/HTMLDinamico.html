@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="listaDeLaCompra">
+
+    </ul>
+    <form name="fCompra">
+        <p><label for="txtProducto">Añada un producto</label>
+        <input type="text" name="cajaProducto" id="txtProducto"></p>
+        <input type="button" name="btnComprar" value="Agregar al carrito">
+    </form>
+    <script>
+        document.fCompra.btnComprar.onclick= function(){
+
+            //Obtener el valor de l acaja
+            var producto = document.fCompra.cajaProducto.value;
+            //Crear un li
+            var liCreado = document.createElement("li");
+            var texto = document.createTextNode(producto);
+            liCreado.appendChild(texto);
+
+            document.getElementById("listaDeLaCompra").appendChild(liCreado);
+
+
+        }
+
+
+        
+    
+    </script>
+</body>
+</html>
