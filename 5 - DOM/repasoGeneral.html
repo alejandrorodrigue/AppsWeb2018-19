@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .oculto{
+            display:none;
+        }
+    </style>
+
+</head>
+<body>
+    <form name="f1">
+       <p> <label>Nombre: </label><input required type="text" name="txtNombre">
+        <span class="oculto">Debe de introducir un nombre</span></p>
+    <p><label>Asignatura:</label></p>
+       <p> <select name="asignatura" required>
+            <option disabled selected value="">Seleccione una asignatura</option>
+            <option value="redes">Redes</option>
+            <option value="ao">AO</option>
+            <option value="ser">SER</option>
+        </select>
+        <span id="errorAsignatura" class="oculto">Debe escoger una asignatura</span>
+        </p>
+       <p> <label>Escoja tema :</label>
+        <input type="radio" name="tema" value="tema1"> Tema 1
+        <input type="radio" name="tema" value="tema2"> Tema 2
+        <input type="radio" name="tema" value="tema3"> Tema 3
+        <span id="errorTema" class="oculto">Debe escoger una asignatura</span>
+    </p>
+        <input type="button" value="ver temario" id="btnValidar">
+
+    </form>
+    <script>
+        //Validacion formulario
+        //Comprobar nombre
+        document.getElementById("btnValidar").onclick=function(){
+        var nombre = document.f1.txtNombre.value;
+        var correcto = true;
+        if(nombre==""){
+            correcto = false;
+            document.querySelector("input[name='txtNombre']+span").classList.remove("oculto");
+            }
+            else{
+                if(document.querySelector("input[name='txtNombre']+span").className==""){
+                    document.querySelector("input[name='txtNombre']+span").classList.add("oculto");
+                }
+               
+            }
+        
+
+        var asignatura = document.f1.asignatura.value;
+        if(asignatura==""){
+            correcto = false;
+            document.getElementById("errorAsignatura").classList.remove("oculto");
+            }
+            else{
+                if(document.querySelector("select[name='asignatura']+span").className==""){
+                    document.querySelector("select[name='asignatura']+span").classList.add("oculto");
+                }
+               
+            }
+
+            var tema = document.f1.tema.value;
+        if(tema==""){
+            correcto = false;
+            document.getElementById("errorTema").classList.remove("oculto");
+            }
+            else{
+                if(document.querySelector("input[type='radio']+span").className==""){
+                    document.querySelector("input[type='radio']+span").classList.add("oculto");
+                }
+               
+            }
+
+        //Añadir temario a la página
+        if(correcto){
+            //Añadir un h2 con la asignatura
+            // var titulo = document.createElement("h2");
+            // var texto = document.createTextNode(asignatura);
+            // titulo.appendChild(texto);
+            // document.getElementById("temario").appendChild(titulo);
+            var ache2 = document.querySelector("#temario > h2");
+            ache2.innerText = asignatura + " " + tema;
+            
+            //Añadir temario
+            if(asignatura=="redes"){
+                if(tema=="tema1"){
+                    document.querySelector("#temario p").innerText = "Tema 1 de Redes . Soy un router";
+                }
+                else if(tema=="tema2"){
+                    document.querySelector("#temario p").innerText = "Tema 2 de Redes. Soy un switch";
+                }
+                else if(tema=="tema3"){
+                    document.querySelector("#temario p").innerText = "Hoy Roberto no viene. Tenemos programación";
+                }
+            }
+        }
+
+        } //Fin de la función del click
+
+        //Eventos de tecclado : Convertir a mayúscula conforme escribe en cajas
+        //Obtener todas las cajas de texto
+        var cajasDeTexto = document.querySelectorAll("input[type='text']");
+
+        for(let i= 0;i<cajasDeTexto.length;i++){
+            cajasDeTexto[i].onkeyup = function(e){
+                this.value = this.value.toUpperCase();
+            }
+        }
+
+
+    
+    </script>
+     
+    <h1 id="tema">Temario escogido</h1>
+    <div id="temario">
+        <h2></h2>
+        <p></p>
+    </div>
+</body>
+</html>
