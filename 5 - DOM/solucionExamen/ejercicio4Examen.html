@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title></title>
+	<style type="text/css">
+		.formulario{
+			width: 40%;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+    
+	<script type="text/javascript">
+		var responsables = ["12345678A*Pedro*678549423","09090909W*Maria*600987543"];
+	</script>
+<form class="formulario" name="f1">
+	<fieldset>
+		<legend>Datos Responsable legal</legend>
+
+	<p><label>DNI </label><input type="text" name="dni"></p>
+	<p><label>Nombre </label><input type="text" name="nombre"></p>
+	<p><label>Telefono </label><input type="text" name="telefono"></p>
+
+	<input type="button" name="btnValidarF1" value="Validar">
+	</fieldset>
+</form>
+
+<form class="formulario" name="f3">
+	<fieldset>
+		<legend>Datos Tutor</legend>
+
+	<p><label>DNI </label><input type="text" name="dniF3"></p>
+	<p><label>Nombre </label><input type="text" name="nombreF3"></p>
+	<p><label>Telefono </label><input type="text" name="telefonoF3"></p>
+
+	<input type="button" name="btnCopiar" value="Copiar datos responsable legal">
+	</fieldset>
+</form>
+
+<form class="formulario" name="f2">
+	<fieldset>
+		<legend>Seleccionar DNI</legend>
+
+		<select name="dnisRes">
+			<option> DNIS Responsables</option>
+		</select>
+
+		<p><label>DNI </label><input type="text" name="dniF2"></p>
+	<p><label>Nombre </label><input type="text" name="nombreF2"></p>
+	<p><label>Telefono </label><input type="text" name="telefonoF2"></p>
+
+
+	</fieldset>
+</form>
+<form class="formulario" name="f4">
+<h2> Tutores añadidos</h2>
+
+<ul id="listaTutores">
+	<li> Tutor 1</li>
+	<li> Tutor 2</li>
+	</ul>
+
+	<p><label>Introduzca el DNI del tutor que desea eliminar </label></p>
+	<p><input type="text" name="dniEliminar" value="Eliminar"></p>
+	<input type="button" name="btnEliminar" value="eliminar">
+
+</form>
+<script>
+// Validar form1
+    document.f1.btnValidarF1.onclick = function(){
+        var nombre = document.f1.nombre.value;
+        var dni = document.f1.dni.value;
+        var telefono = document.f1.telefono.value;
+
+        if(dni==""){
+            alert("Ponga el dni");
+        }
+        else if(nombre==""){
+            alert("Ponga el nombre");
+        }
+        else if(telefono==""){
+            alert("Ponga el telefono");
+        }
+        else{
+            //Crear un option para el select dnisRes
+            var opcion = document.createElement("option");
+            var texto = document.createTextNode(dni);
+            opcion.appendChild(texto);
+            document.f2.dnisRes.appendChild(opcion);
+
+            //Guardar responsable en matriz
+            var responsable = dni+"*"+nombre+"*"+telefono;
+            responsables.push(responsable);
+        }
+
+    }
+    
+    document.f3.btnCopiar.onclick=function(){
+        document.f3.dniF3.value = document.f1.dni.value;
+        document.f3.nombreF3.value = document.f1.nombre.value;
+        document.f3.telefonoF3.value = document.f1.telefono.value;
+    }
+
+    document.f2.dnisRes.onchange=function(){
+        //Buscar el dni en la matriz responsables
+        var dni = document.f2.dnisRes.value;
+
+        for(let i = 0;i<responsables.length;i++){
+            if(responsables[i].includes(dni)){
+                document.f2.dniF2.value = dni;
+                document.f2.nombreF2.value=responsables[i].split("*")[1];
+                document.f2.telefonoF2.value=responsables[i].split("*")[2];
+
+                //Añado a lista tutores
+                var elemento = document.createElement("li");
+                elemento.innerText=responsables[i].split("*")[0];
+                document.getElementById("listaTutores").appendChild(elemento);
+                break;
+            }
+        }
+    }
+
+    document.f4.btnEliminar.onclick=function(){
+        var dni= document.f4.dniEliminar.value;
+        var lis = document.querySelectorAll("ul#listaTutores li");
+
+        for(let i = 0;i<lis.length;i++){
+            if(lis[i].innerText==dni){
+                lis[i].parentElement.removeChild(lis[i]);
+                break;
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

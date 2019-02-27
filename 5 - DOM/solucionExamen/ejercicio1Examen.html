@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <form class="formulario" name="f1">
+                <fieldset>
+                    <legend>Datos Responsable legal</legend>
+            
+                <p><label>DNI </label><input type="text" name="dni"></p>
+                <p><label>Nombre </label><input type="text" name="nombre"></p>
+                <p><label>Telefono </label><input type="text" name="telefono"></p>
+            
+                <input type="button" name="btnValidarF1" value="Validar">
+                </fieldset>
+            </form>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam temporibus officiis dolor impedit sunt corporis dicta expedita repellat. Unde, laboriosam reprehenderit! Praesentium repellendus voluptas blanditiis. Non soluta ducimus reiciendis inventore?</p>
+            <input type="button" value="Modo oscuro" id="btnDark">
+            <script>
+            var inputs = document.getElementsByTagName("input");
+            var selects = document.getElementsByTagName("select");
+
+            for(let i = 0;i<inputs.length;i++){
+                console.log(inputs[i].name);
+            }
+            for(let i = 0;i<selects.length;i++){
+                console.log(selects[i].name);
+            }
+            
+
+            // Ejercicio 2 
+
+            // var parrafos = document.querySelectorAll("article p.especial");
+
+            // for(let i = 0;i<parrafos.length;i++){
+            //     parrafos[i].classList.add("resaltado");
+            // }
+
+            // parrafos[0].style.fontWeight="bold";
+
+            //Ejercicio 3
+            var contador = 0;
+            var boton = document.getElementById("btnDark");
+            boton.onclick=function(){
+                if(contador==0){
+                    document.body.style.backgroundColor="black";
+                    var parrafos = document.getElementsByTagName("p");
+                    for(let i = 0;i<parrafos.length;i++){
+                        parrafos[i].style.color="white";
+                    }
+                    contador+=1;
+                }
+                else{
+                    document.body.style.backgroundColor="white";
+                    var parrafos = document.getElementsByTagName("p");
+                    for(let i = 0;i<parrafos.length;i++){
+                        parrafos[i].style.color="black";
+                    }
+                    contador=0;
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </script>
+</body>
+</html>
